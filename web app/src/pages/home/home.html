@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Products</ion-title>
+    <ion-buttons end>
+        <button (click)="createNewProduct()">
+            <ion-icon name="add"></ion-icon>
+      </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    
+  <ion-list>
+    <button ion-item *ngFor="let product of products" (click)="itemTapped(product)">
+      <ion-icon [name]="product.picture" item-start></ion-icon>
+      {{product.name}}
+      <div class="item-note" item-end>
+        {{product.sellingPrice}}
+      </div>
+    </button>
+  </ion-list>
+  <!-- <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div> -->
+</ion-content>
+
+
+<!-- <ion-header>
+  <ion-navbar>
+  <ion-title>
+  Products
+  </ion-title>
+  </ion-navbar>
+ </ion-header>
+ 
+ <ion-content>
+  <ion-list inset>
+    <ion-item *ngFor="let product of products">
+      <h2>{{product.name}}</h2>
+      <p>{{product.sellingPrice}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content> -->

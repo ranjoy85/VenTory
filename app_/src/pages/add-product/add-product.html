@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+  <ion-title>
+  Add/Edit Product
+  </ion-title>
+  </ion-navbar>
+ </ion-header>
+ 
+ <ion-content padding>
+    <form (ngSubmit)="saveProduct()">
+  <ion-list>
+  <ion-item>
+  <ion-label floating>Product Name</ion-label>
+  <ion-input type="text" name="name" [(ngModel)]="_productModel.name"></ion-input>
+  </ion-item>
+<ion-item>
+  <ion-label floating>Original Price</ion-label>
+  <ion-input type="text" name="originalPrice" [(ngModel)]="_productModel.originalPrice"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Selling Price</ion-label>
+  <ion-input type="text" name="sellingPrice" [(ngModel)]="_productModel.sellingPrice"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Shipping Cost</ion-label>
+  <ion-input type="text" name="shippingCost" [(ngModel)]="_productModel.shippingCost"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Discount</ion-label>
+  <ion-input type="text" name="discount" [(ngModel)]="_productModel.discount"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Coupon Code</ion-label>
+  <ion-input type="text" name="couponCode" [(ngModel)]="_productModel.couponCode"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>Picture</ion-label>
+  <ion-input type="text" name="picture" [(ngModel)]="_productModel.picture"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Sold on</ion-label>
+    <ion-datetime displayFormat="YYYY-MM-DD" name="soldOn" [(ngModel)]="_productModel.soldOn"></ion-datetime>
+  </ion-item>
+  <ion-item>
+  <ion-label>Sold</ion-label>
+  <ion-toggle name="sold" [(ngModel)]="_productModel.sold"></ion-toggle>
+  <!-- <ion-input type="text" name="sold" [(ngModel)]="_productModel.sold"></ion-input> -->
+  </ion-item>
+  <button ion-button type="submit" block>Save Product</button>
+  </ion-list>
+</form>
+  <!-- <ion-card>
+		<ion-card-header>
+			Response
+		</ion-card-header>
+
+		<ion-card-content>
+			<b>{{data.response}}</b>
+		</ion-card-content>
+	</ion-card> -->
+</ion-content>
